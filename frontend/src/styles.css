@@ -1,0 +1,280 @@
+/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #09090b; /* Deep dark gray */
+  --color-secondary: #fafafa; /* Light gray for contrast */
+  /* --color-main-background: #0a0a0a;  */
+  --color-main-background: #020617;
+  --color-secondary-background: #0f172a; /* Default white */
+  --color-main-text: #fafafa; /* Soft gray for general text */
+  --color-secondary-text: #fff700;
+  --color-error-text: #f85e8a; /* Darker red for errors */
+  --color-success-text: #047857; /* Green for success messages */
+  --color-lemon-yellow: #fff700;
+  --color-light-background: #262626;
+}
+
+.varxn-theme {
+  --color-primary: #09090b; /* Deep dark gray */
+  --color-secondary: #fafafa; /* Light gray for contrast */
+  /* --color-main-background: #0a0a0a;  */
+  --color-main-background: #020617;
+  --color-secondary-background: #0f172a; /* Default white */
+  --color-main-text: #fafafa; /* Soft gray for general text */
+  --color-secondary-text: #fff700;
+  --color-error-text: #f85e8a; /* Darker red for errors */
+  --color-success-text: #60a5fa; /* Green for success messages */
+  --color-lemon-yellow: #fff700;
+  --color-light-background: #262626;
+}
+  
+.dark-theme {
+  --color-primary: #000000; /* Tailwind: black */
+  --color-secondary: #FFFFFF; /* Tailwind: white */
+  --color-main-background: #1a202c; /* Tailwind: gray-900 */
+  --color-secondary-background: #2d3748; /* Tailwind: gray-800 */
+  --color-main-text: #e2e8f0; /* Tailwind: gray-200 */
+  --color-secondary-text: #ecc94b; /* Tailwind: yellow-400 */
+  --color-error-text: #f56565; /* Tailwind: red-500 */
+  --color-success-text: #48bb78; /* Tailwind: green-400 */
+  --color-lemon-yellow: #ecc94b; /* Tailwind: yellow-400 */
+  --color-light-background: #4a5568; /* Tailwind: gray-700 */
+}
+
+
+.light-theme {
+  --color-primary: #2d3748; /* Tailwind: gray-700 */
+  --color-secondary: #edf2f7; /* Tailwind: gray-100 */
+  --color-main-background: #f7fafc; /* Tailwind: gray-50 */
+  --color-secondary-background: #e2e8f0; /* Tailwind: gray-200 */
+  --color-main-text: #2d3748; /* Tailwind: gray-700 */
+  --color-secondary-text: #4a5568; /* Tailwind: gray-600 */
+  --color-error-text: #e53e3e; /* Tailwind: red-600 */
+  --color-success-text: #38a169; /* Tailwind: green-600 */
+  --color-lemon-yellow: #d69e2e; /* Tailwind: yellow-600 */
+  --color-light-background: #edf2f7; /* Tailwind: gray-100 */
+}
+
+.panther-theme {
+  --color-primary: #000000; /* Pure black */
+  --color-secondary: #f6e05e; /* Tailwind: lemon yellow (yellow-400) */
+  --color-main-background: #1a202c; /* Tailwind: gray-900 */
+  --color-secondary-background: #2d3748; /* Tailwind: gray-800 */
+  --color-main-text: #f6e05e; /* Lemon yellow for text */
+  --color-secondary-text: #a0aec0; /* Tailwind: gray-400 */
+  --color-error-text: #e53e3e; /* Tailwind: red-600 */
+  --color-success-text: #48bb78; /* Tailwind: green-400 */
+  --color-lemon-yellow: #f6e05e; /* Consistent use of lemon yellow */
+  --color-light-background: #2d3748; /* Tailwind: gray-800 */
+}
+
+  
+.space-theme {
+  --color-primary: #1e3a8a; /* Tailwind: indigo-900 */
+  --color-secondary: #cbd5e0; /* Tailwind: gray-300 */
+  --color-main-background: #0a0e17; /* Deep space blue */
+  --color-secondary-background: #141928; /* Darker space */
+  --color-main-text: #f7fafc; /* Tailwind: gray-50 for starry white text */
+  --color-secondary-text: #a0aec0; /* Tailwind: gray-400 */
+  --color-error-text: #e53e3e; /* Tailwind: red-600 */
+  --color-success-text: #48bb78; /* Tailwind: green-400 */
+  --color-lemon-yellow: #d69e2e; /* Tailwind: yellow-600 */
+  --color-light-background: #2c5282; /* Tailwind: blue-700 */
+}
+
+.fire-theme {
+  --color-primary: #7f1d1d; /* Tailwind: red-900 */
+  --color-secondary: #991b1b; /* Tailwind: red-800 */
+  --color-main-background: #3f0e0e; /* Dark fiery red */
+  --color-secondary-background: #1c0c0c; /* Deep dark background */
+  --color-main-text: #fef3c7; /* Tailwind: amber-100 for warm text */
+  --color-secondary-text: #fbd38d; /* Tailwind: orange-200 */
+  --color-error-text: #e53e3e; /* Tailwind: red-600 */
+  --color-success-text: #f6ad55; /* Tailwind: orange-400 */
+  --color-lemon-yellow: #f6e05e; /* Tailwind: yellow-400 */
+  --color-light-background: #c05621; /* Tailwind: orange-600 */
+}
+
+
+.heaven-theme {
+  --color-primary: #ffffff; /* Pure white */
+  --color-secondary: #f6e05e; /* Tailwind: yellow-400 (gold) */
+  --color-main-background: #f7fafc; /* Tailwind: gray-50 for a soft, bright background */
+  --color-secondary-background: #edf2f7; /* Tailwind: gray-100 for subtle contrast */
+  --color-main-text: #2d3748; /* Tailwind: gray-700, dark for readability */
+  --color-secondary-text: #d4af37; /* Classic gold color */
+  --color-error-text: #e53e3e; /* Tailwind: red-600 */
+  --color-success-text: #38a169; /* Tailwind: green-600 */
+  --color-lemon-yellow: #f6e05e; /* Tailwind: yellow-400 */
+  --color-light-background: #e2e8f0; /* Tailwind: gray-200 */
+}
+
+.jinwoo-theme {
+  --color-primary: #1c1c1e; /* Deep charcoal */
+  --color-secondary: #2d3748; /* Tailwind: gray-800 */
+  --color-main-background: #0f0f0f; /* Pure black for an abyssal feel */
+  --color-secondary-background: #121212; /* Slightly lighter black */
+  --color-main-text: #9f7aea; /* Tailwind: purple-500 for mystical aura */
+  --color-secondary-text: #a0aec0; /* Tailwind: gray-400 for subtle contrast */
+  --color-error-text: #e53e3e; /* Tailwind: red-600 for intensity */
+  --color-success-text: #38b2ac; /* Tailwind: teal-400 for cool contrast */
+  --color-lemon-yellow: #d69e2e; /* Tailwind: yellow-600 for gold accents */
+  --color-light-background: #2d3748; /* Tailwind: gray-800 for depth */
+}
+
+.ice-theme {
+  --color-primary: #e0f2fe; /* Tailwind: sky-100 */
+  --color-secondary: #bae6fd; /* Tailwind: sky-200 */
+  --color-main-background: #f0f9ff; /* Tailwind: sky-50 */
+  --color-secondary-background: #cfe8fc; /* Light ice blue */
+  --color-main-text: #1e3a8a; /* Tailwind: blue-900 for contrast */
+  --color-secondary-text: #3b82f6; /* Tailwind: blue-500 */
+  --color-error-text: #e53e3e; /* Tailwind: red-600 for intensity */
+  --color-success-text: #38b2ac; /* Tailwind: teal-400 for cool contrast */
+  --color-lemon-yellow: #fefcbf; /* Tailwind: yellow-100 */
+  --color-light-background: #dbeafe; /* Tailwind: indigo-100 */
+}
+
+.forest-theme {
+  --color-primary: #22543d; /* Tailwind: green-800 */
+  --color-secondary: #68d391; /* Tailwind: green-400 */
+  --color-main-background: #f0fff4; /* Tailwind: green-50 */
+  --color-secondary-background: #c6f6d5; /* Tailwind: green-200 */
+  --color-main-text: #2f855a; /* Tailwind: green-700 */
+  --color-secondary-text: #4a5568; /* Tailwind: gray-600 */
+  --color-error-text: #e53e3e; /* Tailwind: red-600 */
+  --color-success-text: #48bb78; /* Tailwind: green-400 */
+  --color-lemon-yellow: #faf089; /* Tailwind: yellow-200 */
+  --color-light-background: #e6fffa; /* Tailwind: teal-50 */
+}
+
+
+.darkest-theme {
+  --color-primary: #000000; /* Pure black */
+  --color-secondary: #1a1a1a; /* Very dark gray */
+  --color-main-background: #000000; /* Pure black */
+  --color-secondary-background: #0d0d0d; /* Near black */
+  --color-main-text: #ffffff; /* Pure white for high contrast */
+  --color-secondary-text: #b3b3b3; /* Light gray for subtle contrast */
+  --color-error-text: #ff4c4c; /* Bright red for visibility */
+  --color-success-text: #00ff7f; /* Spring green for contrast */
+  --color-lemon-yellow: #fefcbf; /* Pale yellow for accents */
+  --color-light-background: #1a1a1a; /* Very dark gray */
+}
+
+
+.luffy-theme {
+  --color-main-background: #ffe4b5; /* Light beige representing sand and adventure */
+  --color-secondary-background: #ffecb3; /* Light gold for a softer background */
+  --color-main-text: #2c3e50; /* Dark blue-gray for readability */
+  --color-secondary-text: #ff6347; /* Tomato red for highlights */
+  --color-error-text: #e53e3e; /* Tailwind: red-600 for alert */
+  --color-success-text: #38a169; /* Tailwind: green-600 for success */
+  --color-light-background: #fff5e1; /* Soft cream for warmth */
+}
+
+.sung-theme {
+  --color-main-background: #1a1a2e; /* Deep blue for shadowy effect */
+  --color-secondary-background: #16213e; /* Darker blue */
+  --color-main-text: #eaeaea; /* Light gray for readability */
+  --color-secondary-text: #0f3460; /* Intense blue for emphasis */
+  --color-error-text: #ff4c4c; /* Bright red for contrasting alerts */
+  --color-success-text: #38b2ac; /* Tailwind: teal-400 for success */
+  --color-light-background: #212f45; /* Dark slate blue for depth */
+}
+
+.vampire-theme {
+  --color-main-background: #0d0d0d; /* Pure black for a dark ambiance */
+  --color-secondary-background: #2d0000; /* Deep crimson red */
+  --color-main-text: #eaeaea; /* Pale gray for readability */
+  --color-secondary-text: #b30000; /* Blood red for emphasis */
+  --color-error-text: #e53e3e; /* Tailwind: red-600 for alerts */
+  --color-success-text: #38b2ac; /* Tailwind: teal-400 for contrast */
+  --color-light-background: #1a1a1a; /* Dark gray for depth */
+}
+
+.batman-theme {
+  --color-main-background: #1c1c1e; /* Dark gray for a brooding atmosphere */
+  --color-secondary-background: #2e2e30; /* Slightly lighter gray */
+  --color-main-text: #e5e5e5; /* Light gray for readability */
+  --color-secondary-text: #ffcc00; /* Bright yellow for the iconic bat symbol */
+  --color-error-text: #e53e3e; /* Tailwind: red-600 for alerts */
+  --color-success-text: #38b2ac; /* Tailwind: teal-400 for contrast */
+  --color-light-background: #3a3a3c; /* Mid gray for subtle contrast */
+}
+
+.poseidon-theme {
+  --color-main-background: linear-gradient(180deg, #00c6ff, #0072ff); /* Light to deep sea blue */
+  --color-secondary-background: linear-gradient(180deg, #3ecf8e, #009efd); /* Aqua to blue-green */
+  --color-main-text: #ffffff; /* White for clarity */
+  --color-secondary-text: #d7f9ff; /* Light aqua for subtlety */
+  --color-error-text: #e53e3e; /* Tailwind: red-600 for alerts */
+  --color-success-text: #ffdd57; /* Bright yellow for better contrast */
+  --color-light-background: #e0faff; /* Very light aqua for softness */
+}
+
+.flower-theme {
+  --color-main-background: linear-gradient(180deg, #ff9a9e, #fad0c4); /* Peach to light pink */
+  --color-secondary-background: linear-gradient(180deg, #fad0c4, #f6d365); /* Light pink to soft yellow */
+  --color-main-text: #4a4a4a; /* Dark gray for readability */
+  --color-secondary-text: #ff6f61; /* Coral pink for highlights */
+  --color-error-text: #e53e3e; /* Tailwind: red-600 for alerts */
+  --color-success-text: #48bb78; /* Tailwind: green-400 for success */
+  --color-light-background: #fff0f5; /* Lavender blush for softness */
+}
+
+.lemon-theme {
+  --color-main-background: linear-gradient(180deg, #f6e05e, #ffdd57); /* Soft to bright lemon yellow */
+  --color-secondary-background: linear-gradient(180deg, #ffdd57, #f6b73c); /* Bright yellow to warm gold */
+  --color-main-text: #4a4a4a; /* Dark gray for readability */
+  --color-secondary-text: #c05621; /* Warm orange for highlights */
+  --color-error-text: #e53e3e; /* Tailwind: red-600 for alerts */
+  --color-success-text: #2f855a; /* Tailwind: green-700 for success */
+  --color-light-background: #fffbea; /* Very light yellow for softness */
+}
+
+
+  /* body {
+    background-color: var(--color-main-background);
+  } */
+
+  body {
+    background: var(--color-main-background);
+    color: var(--color-main-text);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .custom-shadow {
+    box-shadow: 0 2px 4px 0 rgba(255, 255, 255, 0.3); /* Example for a light white shadow */
+  }
+
+  .underline-animation {
+    position: relative;
+    display: inline-block;
+    color: var(--color-mainText);
+  }
+  
+  .underline-animation::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--color-mainText);
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .underline-animation:hover::before {
+    visibility: visible;
+    width: 100%;
+  }
+
+  .custom-underline:hover {
+    text-decoration-color: var(--color-secondary-text); /* Replace with your desired color */
+  }

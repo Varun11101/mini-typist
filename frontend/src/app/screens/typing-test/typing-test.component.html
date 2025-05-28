@@ -1,0 +1,59 @@
+<div class="w-[100%] flex flex-col gap-6 "> 
+    <div class="flex flex-row items-center justify-between flex-wrap">
+        <!-- Word Lengths -->
+        <div class="flex flex-row gap-3">
+            <div *ngFor="let wordLength of wordLengthOptions; let itemIndex = index;" class="flex flex-row items-center gap-3">
+                <div class="cursor-pointer text-lg hover:underline hover:underline-offset-[6px] custom-underline"
+                    (click)="wordLengthClicked(wordLength)"
+                    [ngClass]="isActiveWordLength(wordLength) ? 'underline underline-offset-[6px] custom-underline': ''"
+                >
+                    {{ wordLength }}
+                </div>
+                <div *ngIf="itemIndex < wordLengthOptions.length - 1" class="font-thin text-sm text-secondaryText">
+                    /
+                </div>
+            </div>            
+        </div>
+
+        <!-- Display Results -> WPM / ACC -->
+        <div class="flex flex-row items-center gap-3">
+            <div>
+                WPM: 
+            </div>
+            <div class=""
+                [ngClass]="hasTestEnded() ? 'font-extrabold text-secondaryText text-xl animate-pulse' : ''"
+            >
+                {{ getResultNumber('wpm') }}
+            </div>
+            <div class="font-thin text-sm text-secondaryText">
+                /
+            </div>
+            <div>
+                RAW:
+            </div>
+            <div class=""
+            [ngClass]="hasTestEnded() ? 'font-extrabold text-secondaryText text-xl animate-pulse' : ''">
+                {{ getResultNumber('raw')}}
+            </div>
+            <div class="font-thin text-sm text-secondaryText">
+                /
+            </div>
+            <div>
+                ACC:
+            </div>
+            <div class=""
+            [ngClass]="hasTestEnded() ? 'font-extrabold text-secondaryText text-xl animate-pulse' : ''">
+                {{ getResultNumber('acc')}}%
+            </div>
+        </div>
+    </div>
+
+    <!-- Typing Box -->
+    <div class="w-full">
+        <app-typing-box
+            (resultDataEmitter)="handleResultData($event)"
+            [currentText]="currentText"
+            (restartEvent)="restartClicked()"
+        />
+    </div>
+</div>

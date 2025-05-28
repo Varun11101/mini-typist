@@ -1,0 +1,17 @@
+<div class="flex flex-col gap-2 w-full">
+    <div class="cursor-pointer" (click)="backClicked()">
+        &lt; back
+    </div>
+    <div class="w-full min-h-[20rem] bg-secondaryBg rounded-lg flex flex-row gap-4 flex-wrap p-2">
+        <div *ngFor="let themeObj of allThemes"
+            (click)="themeClicked(themeObj)"
+            class="cursor-pointer w-[23%] h-[5rem] flex flex-col items-center justify-center rounded-lg"
+            [ngStyle]="{
+              'background': 'linear-gradient(135deg, ' + themeObj.mainBg + ' 50%, ' + themeObj.secondaryBg + ' 50%)',
+              'color': themeObj.mainText
+            }"
+        >
+            {{ themeObj.name }}
+        </div>
+    </div>
+</div>

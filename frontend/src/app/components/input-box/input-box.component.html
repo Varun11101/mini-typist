@@ -1,0 +1,8 @@
+<input
+  nz-input
+  [placeholder]="placeholder"
+  [(ngModel)]="inputValue"
+  [disabled]="shouldDisable"
+  (ngModelChange)="onInputChange($event)"
+  class="p-2 text-xl w-full rounded-md border-1 border-mainText bg-mainBg text-mainText placeholder-mainText placeholder:text-sm placeholder-gray-400"
+/>

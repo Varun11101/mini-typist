@@ -1,0 +1,33 @@
+<div class="w-[100%] bg-secondaryBg rounded-md px-4 py-6 flex flex-col gap-6">
+    <div class="text-lg">
+        <span *ngFor="let eachText of currentText; let wordIndex = index;"
+            [ngClass]="currentTextStatus[wordIndex] === 'passed' ? 
+                'text-successText' :
+                currentTextStatus[wordIndex] === 'failed' ?
+                'text-errorText' :
+                currentTextStatus[wordIndex] === 'active'?
+                'text-secondaryText' : ''
+            "
+        >
+            {{ eachText }}
+        </span>
+    </div>
+    <div class="flex flex-row items-center gap-3">
+        <div class="flex-1">
+            <app-input-box
+            [(inputValue)]="currentInput"
+            (inputValueChange)="currentInputChange($event)"
+            [shouldDisable]="testEnded"
+            [placeholder]="getPlaceholder()"
+            />
+        </div>
+        <div class=" hover:animate-pulse bg-mainBg py-2.5 px-3 rounded-md text-mainText cursor-pointer">
+            <!-- please fill the logic here to implement a timer. this will start as soon as user has typed atleast one character -->
+            {{ getTimeElapsed() }}
+        </div>
+        <div class=" hover:animate-pulse bg-mainBg py-2.5 px-3 rounded-md text-mainText cursor-pointer" (click)="restartClicked()">
+            restart
+        </div>
+    </div>
+
+</div>
