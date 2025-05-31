@@ -1,0 +1,32 @@
+<div class="w-[100%] flex flex-row items-center justify-center">
+    <div class="w-[55%] bg-secondaryBg rounded-sm py-8 px-6">
+        <div class="flex flex-row items-center justify-center text-2xl font-bold">
+            {{ isLogin() ? 'Login' : 'Register' }}
+        </div>
+        <div class="flex flex-col gap-2 mt-6 items-center">
+            <div class="w-[100%]">
+                <app-input-box
+                    [placeholder]="'Enter Username'"
+                />
+            </div>
+            <div class="w-[100%]">
+                <app-input-box
+                    [placeholder]="'Enter Password'"
+                />
+            </div>
+        </div>
+        <div class="w-[100%] mt-3">
+        <div class=" hover:animate-pulse opacity-100 bg-mainBg text-center py-2.5 px-3 rounded-md text-mainText cursor-pointer" (click)="submitClicked()">
+            {{ isLogin() ? 'Login' : 'Register'}}
+        </div>
+        </div>
+        <div class="mt-6 flex flex-row gap-2 text-center text-sm items-center justify-center">
+            <div>
+                {{  getSwitchMainText() }}
+            </div>
+            <div class="font-semibold cursor-pointer" (click)="switchMode()">
+                {{ getSwitchSecondaryText() }}
+            </div>
+        </div>
+    </div>
+</div>

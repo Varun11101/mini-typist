@@ -1,6 +1,6 @@
 import { Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
+import { Router, RouterOutlet } from '@angular/router';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { TypingTestComponent } from './screens/typing-test/typing-test.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -16,8 +16,9 @@ import { ProjectService } from './services/project.service';
 export class AppComponent {
   title = 'mini-typist';
 
-  constructor(private projectService: ProjectService) {
+  constructor(private projectService: ProjectService, private router: Router) {
     this.projectService.applyThemeIfSet();
+    // this.router.navigateByUrl("/login")
   }
 
 }

@@ -1,10 +1,25 @@
-<div class="py-5 font-semibold text-center text-2xl bg-mainBg w-full flex flex-row items-center justify-center">
-    <div class="cursor-pointer flex flex-row items-center">
+<div class="py-5 w-full flex flex-col gap-2 items-center justify-center">
+    <div class="cursor-pointer flex flex-row items-center font-semibold text-center text-2xl">
         <!-- <span>mini-typist</span><span class="animate-bounce text-emerald-600">.</span> -->
         <div class="">mini-</div> 
         <div class="text-secondaryText">
             typist
          </div>
-         <div class="animate-pulse text-secondaryText">.</div>
+        <div class="animate-pulse text-secondaryText">.</div>
+         <!-- <div> -->
+            <!-- <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M17 7l-1.41 1.41L18.17 11H8v2h10.17l-2.58 2.58L17 17l5-5zM4 5h8V3H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h8v-2H4V5z"/></svg> -->
+         <!-- </div> -->
     </div>
+    <div class="flex flex-row items-center gap-2">
+        <div class="cursor-pointer">
+            profile
+        </div>
+        <div class="text-secondaryText">/</div>
+        <div class="cursor-pointer"> leaderboards </div>
+        <div class="text-secondaryText">/</div>
+        <div class="cursor-pointer" (click)="logout()">
+            logout
+        </div>
+    </div>
+    
 </div>

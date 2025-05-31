@@ -242,7 +242,9 @@
   } */
 
   body {
-    background: var(--color-main-background);
+    /* background: var(--color-main-background); */
+    background: url('assets/jinwoomini.png') no-repeat center center fixed;
+    opacity: 0.95;
     color: var(--color-main-text);
     background-size: cover;
     background-repeat: no-repeat;
