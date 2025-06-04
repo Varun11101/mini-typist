@@ -7,11 +7,16 @@
             <div class="w-[100%]">
                 <app-input-box
                     [placeholder]="'Enter Username'"
+                    [inputValue]="username"
+                    (inputValueChange)="dataChanged($event, 'username')"
+
                 />
             </div>
             <div class="w-[100%]">
                 <app-input-box
                     [placeholder]="'Enter Password'"
+                    [inputValue]="password"
+                    (inputValueChange)="dataChanged($event, 'password')"
                 />
             </div>
         </div>

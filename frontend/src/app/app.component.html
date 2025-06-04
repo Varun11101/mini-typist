@@ -5,7 +5,12 @@
   </div>
   <div class="flex-1 w-full flex flex-col justify-center px-[24%]">
     <!-- <app-typing-test class="" /> -->
-    <router-outlet></router-outlet>
+    <div *ngIf="!isLoading()">
+      <router-outlet></router-outlet>
+    </div>
+    <div *ngIf="isLoading()" class="flex flex-row items-center justify-center">
+      Loading...
+    </div>
   </div>
   <div class="py-6 w-full px-[24%]">
      <app-footer />

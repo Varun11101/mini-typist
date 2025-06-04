@@ -2,6 +2,7 @@ import { NgFor, NgIf } from '@angular/common';
 import { Component } from '@angular/core';
 import { UtilsService } from '../../services/utils.service';
 import { Router } from '@angular/router';
+import { LoginService } from '../../services/project.service';
 
 @Component({
   selector: 'app-navbar',
@@ -14,11 +15,18 @@ export class NavbarComponent {
 
   constructor(
     private utils: UtilsService,
-    private router: Router
+    private router: Router,
+    private login: LoginService
   ) {}
 
+
+
+    shouldDisplaySecondaryNav() {
+      return this.login.isUserLoggedIn();
+    }
+    
     logout() {
-      this.router.navigateByUrl("/login")
+      this.login.logout();
     }
 
 }
